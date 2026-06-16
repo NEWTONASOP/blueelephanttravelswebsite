@@ -401,7 +401,7 @@ function DrawerContent({ isMobile, onClose }: { isMobile: boolean; onClose: () =
           transition={{ delay: 0.1, duration: 0.5, ease: "easeOut" }}
           className="absolute right-6 top-6 pointer-events-none"
         >
-          <Globe size={64} className="text-white" strokeWidth={0.8} />
+          <Compass size={64} className="text-white" strokeWidth={0.8} />
         </motion.div>
 
         <ul className="grid grid-cols-1 gap-3">
@@ -432,7 +432,7 @@ function DrawerContent({ isMobile, onClose }: { isMobile: boolean; onClose: () =
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="pointer-events-none absolute -right-10 -top-10"
       >
-        <Globe size={200} className="text-white" strokeWidth={0.5} />
+        <Compass size={200} className="text-white" strokeWidth={0.5} />
       </motion.div>
 
       <ul className="grid grid-cols-3 gap-3">

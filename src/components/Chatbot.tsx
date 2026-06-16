@@ -31,7 +31,7 @@ const INITIAL_MESSAGES: Message[] = [
 const INITIAL_QUICK_REPLIES: QuickReplyItem[] = [
   { icon: MapPin, label: "Top Destinations" },
   { icon: Calendar, label: "Book a Consultation" },
-  { icon: Globe, label: "Wildlife Safaris" },
+  { icon: Sparkles, label: "Wildlife Safaris" },
 ];
 
 function getTime() {

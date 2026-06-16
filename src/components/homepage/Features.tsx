@@ -29,7 +29,7 @@ const FEATURES: Feature[] = [
     icon: Plane,
     title: "Custom Itineraries",
     description:
-      "We craft bespoke travel plans aligned with your interests, pace, and budget — no two trips are ever the same.",
+      "Bespoke itineraries crafted to match your exact interests, preferences, and pace — no two trips are ever the same.",
     cardGradient: "from-sky-50 via-sky-100/60 to-indigo-50",
     iconBg: "bg-sky-500",
     iconColor: "text-white",
@@ -40,9 +40,9 @@ const FEATURES: Feature[] = [
   },
   {
     icon: Building2,
-    title: "Luxury Accommodations",
+    title: "Temple Tours",
     description:
-      "Handpicked heritage hotels, boutique retreats, and jungle lodges that elevate your stay to an experience in itself.",
+      "Sacred circuits, historic temple paths, and tranquil spiritual retreats mapped across major cultural destinations.",
     cardGradient: "from-rose-50 via-rose-100/60 to-pink-50",
     iconBg: "bg-rose-500",
     iconColor: "text-white",
@@ -55,7 +55,7 @@ const FEATURES: Feature[] = [
     icon: Compass,
     title: "Expert Local Guides",
     description:
-      "Our knowledgeable guides bring history, culture and hidden stories to life — turning sightseeing into storytelling.",
+      "Immersive local sightseeing led by professional guides who turn sightseeing into storytelling.",
     cardGradient: "from-emerald-50 via-emerald-100/60 to-teal-50",
     iconBg: "bg-emerald-500",
     iconColor: "text-white",
@@ -68,7 +68,7 @@ const FEATURES: Feature[] = [
     icon: PawPrint,
     title: "Wildlife Safaris",
     description:
-      "From tiger sightings in Ranthambore to elephant encounters in Kabini — unforgettable wildlife experiences await.",
+      "Thrilling jungle safaris, tiger tracking in Ranthambore, and expert-led wildlife expeditions.",
     cardGradient: "from-amber-50 via-amber-100/60 to-orange-50",
     iconBg: "bg-amber-500",
     iconColor: "text-white",
@@ -79,9 +79,9 @@ const FEATURES: Feature[] = [
   },
   {
     icon: Heart,
-    title: "Honeymoon Packages",
+    title: "Honeymoon Tours",
     description:
-      "Romantic getaways crafted with special touches — candlelit dinners, spa treatments, and breathtaking sunsets.",
+      "Romantic getaways designed with premium touches — candlelit dinners, beachside villas, and breathtaking sunsets.",
     cardGradient: "from-pink-50 via-pink-100/60 to-fuchsia-50",
     iconBg: "bg-pink-500",
     iconColor: "text-white",
@@ -92,9 +92,9 @@ const FEATURES: Feature[] = [
   },
   {
     icon: Users,
-    title: "Group & Family Tours",
+    title: "Family Groups",
     description:
-      "Seamlessly coordinated group tours and family vacations that create shared memories to last a lifetime.",
+      "Seamlessly organized group departures and family vacations tailored for every age group and pace.",
     cardGradient: "from-violet-50 via-violet-100/60 to-purple-50",
     iconBg: "bg-violet-500",
     iconColor: "text-white",

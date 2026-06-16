@@ -109,6 +109,7 @@ export const DESTINATIONS: Destination[] = [
     bestFor: "Family & Adventure",
     waLink:
       "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Thailand*.%20Could%20you%20share%20details%3F",
+    featured: true,
   },
   {
     slug: "singapore",
@@ -133,200 +134,81 @@ export const DESTINATIONS: Destination[] = [
     bestFor: "City & Food",
     waLink:
       "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Singapore*.%20Could%20you%20share%20details%3F",
+    featured: true,
   },
   {
-    slug: "kashmir",
-    name: "Kashmir",
-    country: "India",
-    region: "India",
-    season: ["summer"],
-    tag: "Scenic",
-    tagColor: "bg-teal-100 text-teal-700",
-    image:
-      "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=800&q=80",
-    heroImage:
-      "https://images.unsplash.com/photo-1593417376544-4c4201061e22?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8a2FzaG1pcnxlbnwwfHwwfHx8MA%3D%3D",
-    description:
-      "Heaven on earth — shimmering Dal Lake, snow-capped peaks, and houseboat stays that feel timeless.",
-    highlights: [
-      "Dal Lake Houseboat",
-      "Gulmarg Snow",
-      "Pahalgam Valley",
-      "Mughal Gardens",
-    ],
-    duration: "5–7 nights",
-    budget: "₹30,000+",
-    bestFor: "Nature & Romance",
-    waLink:
-      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Kashmir*.%20Could%20you%20share%20details%3F",
-  },
-  {
-    slug: "jaipur",
-    name: "Jaipur",
-    country: "India",
-    region: "India",
-    season: ["winter"],
-    tag: "Heritage",
-    tagColor: "bg-rose-100 text-rose-700",
-    image:
-      "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80",
-    description:
-      "The Pink City — a living museum of Rajput grandeur, with palaces, bazaars, and desert sunsets.",
-    highlights: [
-      "Amber Fort",
-      "City Palace",
-      "Hawa Mahal",
-      "Elephant Ride",
-    ],
-    duration: "3–5 nights",
-    budget: "₹20,000+",
-    bestFor: "Heritage & Culture",
-    waLink:
-      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Jaipur*.%20Could%20you%20share%20details%3F",
-  },
-  {
-    slug: "kerala",
-    name: "Kerala",
-    country: "India",
-    region: "India",
-    season: ["monsoon"],
-    tag: "Serene",
-    tagColor: "bg-emerald-100 text-emerald-700",
-    image:
-      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80",
-    description:
-      "God's Own Country — backwaters, spice gardens, Ayurveda, and lush monsoon greenery.",
-    highlights: [
-      "Alleppey Backwaters",
-      "Munnar Tea Gardens",
-      "Kovalam Beach",
-      "Ayurvedic Spa",
-    ],
-    duration: "5–8 nights",
-    budget: "₹25,000+",
-    bestFor: "Wellness & Nature",
-    waLink:
-      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Kerala*.%20Could%20you%20share%20details%3F",
-  },
-  {
-    slug: "goa",
-    name: "Goa",
-    country: "India",
-    region: "India",
-    season: ["winter"],
-    tag: "Popular",
-    tagColor: "bg-amber-100 text-amber-700",
-    image:
-      "https://images.unsplash.com/photo-1582972236019-ea4af5ffe587?auto=format&fit=crop&w=800&q=80",
-    description:
-      "Sun, sea, and soul — Portuguese forts, beach shacks, and the most legendary sunsets in India.",
-    highlights: [
-      "Baga & Anjuna Beach",
-      "Old Goa Churches",
-      "Spice Plantation",
-      "Night Markets",
-    ],
-    duration: "4–6 nights",
-    budget: "₹18,000+",
-    bestFor: "Beach & Nightlife",
-    waLink:
-      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Goa*.%20Could%20you%20share%20details%3F",
-  },
-  {
-    slug: "santorini",
-    name: "Santorini",
-    country: "Greece",
-    region: "Europe",
-    season: ["summer"],
-    tag: "Special Offer",
-    tagColor: "bg-pink-100 text-pink-700",
-    image:
-      "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?auto=format&fit=crop&w=800&q=80",
-    description:
-      "Whitewashed villages tumbling into caldera cliffs, with wine-dark seas and incomparable sunsets.",
-    highlights: [
-      "Oia Sunset",
-      "Caldera Cruise",
-      "Fira Old Town",
-      "Black Sand Beaches",
-    ],
-    duration: "5–7 nights",
-    budget: "₹1,50,000+",
-    bestFor: "Honeymoon & Photography",
-    waLink:
-      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Santorini*.%20Could%20you%20share%20details%3F",
-  },
-  {
-    slug: "paris",
-    name: "Paris",
-    country: "France",
-    region: "Europe",
-    season: ["summer"],
-    tag: "Classic",
+    slug: "japan",
+    name: "Japan",
+    country: "Japan",
+    region: "Asia",
+    season: ["summer", "winter"],
+    tag: "Trending",
     tagColor: "bg-indigo-100 text-indigo-700",
     image:
-      "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=800&q=80",
     description:
-      "The City of Light never dims — art, architecture, cuisine, and romance in every arrondissement.",
+      "A gorgeous land of temples, cherry blossoms, futuristic cities, and rich traditions.",
     highlights: [
-      "Eiffel Tower",
-      "Louvre Museum",
-      "Montmartre",
-      "Seine River Cruise",
+      "Mount Fuji",
+      "Kyoto Shrines",
+      "Tokyo Shibuya Cross",
+      "Bullet Train Experience",
     ],
-    duration: "5–8 nights",
-    budget: "₹1,30,000+",
-    bestFor: "Culture & Romance",
+    duration: "6–9 nights",
+    budget: "₹1,80,000+",
+    bestFor: "Culture & Tech",
     waLink:
-      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Paris*.%20Could%20you%20share%20details%3F",
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Japan*.%20Could%20you%20share%20details%3F",
+    featured: true,
   },
   {
-    slug: "switzerland",
-    name: "Switzerland",
-    country: "Switzerland",
-    region: "Europe",
-    season: ["summer"],
+    slug: "vietnam",
+    name: "Vietnam",
+    country: "Vietnam",
+    region: "Asia",
+    season: ["winter", "summer"],
+    tag: "Popular",
+    tagColor: "bg-emerald-100 text-emerald-700",
+    image:
+      "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Immerse yourself in limestone bays, ancient towns, vibrant markets, and flavorful cuisine.",
+    highlights: [
+      "Halong Bay Cruise",
+      "Hoi An Ancient Town",
+      "Cu Chi Tunnels",
+      "Mekong Delta",
+    ],
+    duration: "5–8 nights",
+    budget: "₹45,000+",
+    bestFor: "Adventure & Heritage",
+    waLink:
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Vietnam*.%20Could%20you%20share%20details%3F",
+    featured: true,
+  },
+  {
+    slug: "nepal",
+    name: "Nepal",
+    country: "Nepal",
+    region: "Asia",
+    season: ["summer", "winter"],
     tag: "Scenic",
     tagColor: "bg-teal-100 text-teal-700",
     image:
-      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80",
     description:
-      "Alpine perfection — snow-crested peaks, mirror lakes, chocolate-box villages, and pristine air.",
+      "The roof of the world — discover ancient Buddhist heritage, soaring mountains, and spiritual serenity.",
     highlights: [
-      "Jungfraujoch",
-      "Interlaken",
-      "Lake Geneva",
-      "Zermatt & Matterhorn",
+      "Kathmandu Valley",
+      "Pokhara Lake View",
+      "Chitwan National Park",
+      "Everest Base Camp View",
     ],
-    duration: "7–10 nights",
-    budget: "₹1,80,000+",
-    bestFor: "Scenic & Family",
+    duration: "4–7 nights",
+    budget: "₹30,000+",
+    bestFor: "Spiritual & Trekking",
     waLink:
-      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Switzerland*.%20Could%20you%20share%20details%3F",
-  },
-  {
-    slug: "ladakh",
-    name: "Ladakh",
-    country: "India",
-    region: "India",
-    season: ["summer"],
-    tag: "Adventure",
-    tagColor: "bg-orange-100 text-orange-700",
-    image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
-    description:
-      "A high-altitude wonderland of stark landscapes, ancient monasteries, and magnetic skies.",
-    highlights: [
-      "Pangong Lake",
-      "Nubra Valley",
-      "Magnetic Hill",
-      "Thiksey Monastery",
-    ],
-    duration: "6–9 nights",
-    budget: "₹35,000+",
-    bestFor: "Adventure & Spiritual",
-    waLink:
-      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Ladakh*.%20Could%20you%20share%20details%3F",
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Nepal*.%20Could%20you%20share%20details%3F",
   },
   {
     slug: "sri-lanka",
@@ -353,28 +235,253 @@ export const DESTINATIONS: Destination[] = [
       "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Sri%20Lanka*.%20Could%20you%20share%20details%3F",
   },
   {
-    slug: "coorg",
-    name: "Coorg",
+    slug: "malaysia",
+    name: "Malaysia",
+    country: "Malaysia",
+    region: "Asia",
+    season: ["winter", "summer"],
+    tag: "Popular",
+    tagColor: "bg-amber-100 text-amber-700",
+    image:
+      "https://images.unsplash.com/photo-1508062878650-88b52897f298?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Explore historical colonial towns, shopping districts, tropical rainforests, and paradise islands.",
+    highlights: [
+      "Petronas Twin Towers",
+      "Batu Caves",
+      "Langkawi Archipelago",
+      "Penang Street Art",
+    ],
+    duration: "4–7 nights",
+    budget: "₹40,000+",
+    bestFor: "Family & Shopping",
+    waLink:
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Malaysia*.%20Could%20you%20share%20details%3F",
+  },
+  {
+    slug: "turkey",
+    name: "Turkey",
+    country: "Turkey",
+    region: "Europe",
+    season: ["summer", "winter"],
+    tag: "Cultural",
+    tagColor: "bg-violet-100 text-violet-700",
+    image:
+      "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A magnificent bridge between East and West. Discover Byzantine history, fairy chimneys, and busy bazaars.",
+    highlights: [
+      "Hagia Sophia",
+      "Cappadocia Balloons",
+      "Pamukkale Terraces",
+      "Grand Bazaar",
+    ],
+    duration: "6–9 nights",
+    budget: "₹1,10,000+",
+    bestFor: "History & Romance",
+    waLink:
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Turkey*.%20Could%20you%20share%20details%3F",
+  },
+  {
+    slug: "azerbaijan",
+    name: "Azerbaijan",
+    country: "Azerbaijan",
+    region: "Middle East",
+    season: ["winter", "summer"],
+    tag: "Modern Heritage",
+    tagColor: "bg-rose-100 text-rose-700",
+    image:
+      "https://images.unsplash.com/photo-1579621970795-87facc2f976d?auto=format&fit=crop&w=800&q=80",
+    description:
+      "The Land of Fire. Witness mud volcanoes, ultra-modern architecture, and charming medieval walls.",
+    highlights: [
+      "Baku Old City",
+      "Flame Towers",
+      "Gobustan Mud Volcanoes",
+      "Heydar Aliyev Center",
+    ],
+    duration: "4–6 nights",
+    budget: "₹65,000+",
+    bestFor: "Architecture & Exploration",
+    waLink:
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Azerbaijan*.%20Could%20you%20share%20details%3F",
+  },
+  {
+    slug: "kerala",
+    name: "Kerala",
     country: "India",
     region: "India",
     season: ["monsoon"],
     tag: "Serene",
     tagColor: "bg-emerald-100 text-emerald-700",
     image:
-      "https://images.unsplash.com/photo-1660559028700-5f2cff62a31b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG1vbnNvb258ZW58MHx8MHx8fDA%3D",
+      "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80",
     description:
-      "Scotland of India — misty coffee estates, roaring waterfalls, and a lush monsoon embrace.",
+      "God's Own Country — backwaters, spice gardens, Ayurveda, and lush monsoon greenery.",
     highlights: [
-      "Abbey Falls",
-      "Raja's Seat",
-      "Coffee Estate Walk",
-      "Nagarhole Safari",
+      "Alleppey Backwaters",
+      "Munnar Tea Gardens",
+      "Kovalam Beach",
+      "Ayurvedic Spa",
+    ],
+    duration: "5–8 nights",
+    budget: "₹25,000+",
+    bestFor: "Wellness & Nature",
+    waLink:
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Kerala*.%20Could%20you%20share%20details%3F",
+    featured: true,
+  },
+  {
+    slug: "jim-corbett",
+    name: "Jim Corbett",
+    country: "India",
+    region: "India",
+    season: ["winter", "summer"],
+    tag: "Safari",
+    tagColor: "bg-amber-100 text-amber-700",
+    image:
+      "https://images.unsplash.com/photo-1602491453631-e2a5ad90a131?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Experience thrilling jungle safaris, tiger sightings, and nature trails in India's oldest national park.",
+    highlights: [
+      "Tiger Jeep Safari",
+      "Dhikala Forest Zone",
+      "Ramganga River",
+      "Jungle Lodging",
     ],
     duration: "3–5 nights",
     budget: "₹15,000+",
-    bestFor: "Nature & Couples",
+    bestFor: "Wildlife & Safaris",
     waLink:
-      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Coorg*.%20Could%20you%20share%20details%3F",
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Jim%20Corbett*.%20Could%20you%20share%20details%3F",
+    featured: true,
+  },
+  {
+    slug: "goa",
+    name: "Goa",
+    country: "India",
+    region: "India",
+    season: ["winter"],
+    tag: "Popular",
+    tagColor: "bg-amber-100 text-amber-700",
+    image:
+      "https://images.unsplash.com/photo-1582972236019-ea4af5ffe587?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Sun, sea, and soul — Portuguese forts, beach shacks, and the most legendary sunsets in India.",
+    highlights: [
+      "Baga & Anjuna Beach",
+      "Old Goa Churches",
+      "Spice Plantation",
+      "Night Markets",
+    ],
+    duration: "4–6 nights",
+    budget: "₹18,000+",
+    bestFor: "Beach & Nightlife",
+    waLink:
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Goa*.%20Could%20you%20share%20details%3F",
+    featured: true,
+  },
+  {
+    slug: "rajasthan",
+    name: "Rajasthan",
+    country: "India",
+    region: "India",
+    season: ["winter"],
+    tag: "Heritage",
+    tagColor: "bg-rose-100 text-rose-700",
+    image:
+      "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Land of Kings — discover grand palaces, ancient forts, folk music, and vibrant desert colors.",
+    highlights: [
+      "Amber Fort (Jaipur)",
+      "City Palace & Lakes",
+      "Mehrangarh Fort (Jodhpur)",
+      "Thar Desert Safari",
+    ],
+    duration: "4–7 nights",
+    budget: "₹22,000+",
+    bestFor: "Heritage & Culture",
+    waLink:
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Rajasthan*.%20Could%20you%20share%20details%3F",
+    featured: true,
+  },
+  {
+    slug: "andaman-nicobar",
+    name: "Andaman & Nicobar",
+    country: "India",
+    region: "India",
+    season: ["winter"],
+    tag: "Exotic",
+    tagColor: "bg-sky-100 text-sky-700",
+    image:
+      "https://images.unsplash.com/photo-1590523277543-a94d2e4eb00b?auto=format&fit=crop&w=800&q=80",
+    description:
+      "Pristine beaches, crystal clear waters, coral reefs, and exciting water sports in tropical serenity.",
+    highlights: [
+      "Radhanagar Beach",
+      "Coral Reef Scuba Diving",
+      "Havelock Island Walk",
+      "Cellular Jail Light Show",
+    ],
+    duration: "5–8 nights",
+    budget: "₹45,000+",
+    bestFor: "Honeymoon & Adventure",
+    waLink:
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Andaman%20and%20Nicobar*.%20Could%20you%20share%20details%3F",
+    featured: true,
+  },
+  {
+    slug: "ladakh",
+    name: "Ladakh",
+    country: "India",
+    region: "India",
+    season: ["summer"],
+    tag: "Adventure",
+    tagColor: "bg-orange-100 text-orange-700",
+    image:
+      "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=80",
+    description:
+      "A high-altitude wonderland of stark landscapes, ancient monasteries, and magnetic skies.",
+    highlights: [
+      "Pangong Lake",
+      "Nubra Valley",
+      "Magnetic Hill",
+      "Thiksey Monastery",
+    ],
+    duration: "6–9 nights",
+    budget: "₹35,000+",
+    bestFor: "Adventure & Spiritual",
+    waLink:
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Ladakh*.%20Could%20you%20share%20details%3F",
+    featured: true,
+  },
+  {
+    slug: "kashmir",
+    name: "Kashmir",
+    country: "India",
+    region: "India",
+    season: ["summer"],
+    tag: "Scenic",
+    tagColor: "bg-teal-100 text-teal-700",
+    image:
+      "https://images.unsplash.com/photo-1598091383021-15ddea10925d?auto=format&fit=crop&w=800&q=80",
+    heroImage:
+      "https://images.unsplash.com/photo-1593417376544-4c4201061e22?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8a2FzaG1pcnxlbnwwfHwwfHx8MA%3D%3D",
+    description:
+      "Heaven on earth — shimmering Dal Lake, snow-capped peaks, and houseboat stays that feel timeless.",
+    highlights: [
+      "Dal Lake Houseboat",
+      "Gulmarg Snow",
+      "Pahalgam Valley",
+      "Mughal Gardens",
+    ],
+    duration: "5–7 nights",
+    budget: "₹30,000+",
+    bestFor: "Nature & Romance",
+    waLink:
+      "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20*Kashmir*.%20Could%20you%20share%20details%3F",
+    featured: true,
   },
 ];
 

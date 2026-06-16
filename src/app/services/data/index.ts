@@ -33,15 +33,6 @@ export const TAB_ICONS: Record<Tab, React.ElementType> = {
 export const SERVICES: Record<Tab, Service[]> = {
   International: [
     {
-      icon: Hotel,
-      title: "Hotels",
-      description: "Luxurious stays worldwide with best-in-class amenities and handpicked properties.",
-      waLink: "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20knowing%20more%20about%20*Hotels*.",
-      iconBg: "bg-sky-50",
-      iconColor: "text-sky-600",
-      accent: "#0ea5e9",
-    },
-    {
       icon: Plane,
       title: "Flights",
       description: "Affordable and premium flights to every corner of the globe, curated for comfort.",
@@ -89,6 +80,15 @@ export const SERVICES: Record<Tab, Service[]> = {
     },
   ],
   Domestic: [
+    {
+      icon: Hotel,
+      title: "Hotels",
+      description: "Premium and boutique hotels across India, from heritage palaces to beachside resorts, handpicked for comfort.",
+      waLink: "https://wa.me/919870324003?text=Hello%2C%20I%27m%20interested%20in%20knowing%20more%20about%20*Hotels*.",
+      iconBg: "bg-sky-50",
+      iconColor: "text-sky-600",
+      accent: "#0ea5e9",
+    },
     {
       icon: MapPin,
       title: "Heritage Tours",
