@@ -22,7 +22,10 @@ export async function callAIAPI(messages: any[], tools: any[] | null = null, too
     model: CONFIG.AI_MODEL,
     messages: messages,
     temperature: CONFIG.AI_TEMPERATURE,
+    // Groq prefers `max_completion_tokens` but remains compatible with `max_tokens`.
+    // Sending both prevents provider-specific schema mismatches.
     max_tokens: CONFIG.AI_MAX_TOKENS,
+    max_completion_tokens: CONFIG.AI_MAX_TOKENS,
     top_p: CONFIG.AI_TOP_P,
     stream: false,
   };
