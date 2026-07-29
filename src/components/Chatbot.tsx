@@ -533,81 +533,90 @@ export default function ChatBot() {
         </AnimatePresence>
       )}
 
-      <div
-        className="fixed z-[10000] flex flex-col items-end gap-4"
-        style={{ bottom: fabBottom, right: fabRight }}
-      >
-        <AnimatePresence>
-          {!open && (
-            <motion.div
-              initial={{ opacity: 0, y: 10, scale: 0.9 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: 10, scale: 0.9 }}
-              transition={{ delay: 0.2 }}
-              className="relative flex items-center gap-2 rounded-2xl bg-white px-5 py-3 shadow-card ring-1 ring-slate-100 cursor-pointer hover:shadow-lift transition-shadow"
-              onClick={() => setOpen(true)}
+      {/* Hide FAB on mobile when chat is open — it overlaps the send button; header X closes the sheet */}
+      <AnimatePresence>
+        {(bp !== "mobile" || !open) && (
+          <motion.div
+            key="chat-fab"
+            initial={{ opacity: 0, scale: 0.85 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.85 }}
+            transition={{ duration: 0.2 }}
+            className="fixed z-[10000] flex flex-col items-end gap-4"
+            style={{ bottom: fabBottom, right: fabRight }}
+          >
+            <AnimatePresence>
+              {!open && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10, scale: 0.9 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 10, scale: 0.9 }}
+                  transition={{ delay: 0.2 }}
+                  className="relative flex items-center gap-2 rounded-2xl bg-white px-5 py-3 shadow-card ring-1 ring-slate-100 cursor-pointer hover:shadow-lift transition-shadow"
+                  onClick={() => setOpen(true)}
+                >
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
+                  </span>
+                  <span className="text-[13px] font-semibold text-slate-700 tracking-wide font-heading">Plan Your Trip</span>
+                  <div className="absolute -bottom-2 right-6 h-4 w-4 rotate-45 bg-white border-b border-r border-slate-100" />
+                </motion.div>
+              )}
+            </AnimatePresence>
+
+            <motion.button
+              onClick={() => setOpen((v) => !v)}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              aria-label="Toggle chat"
+              className="relative flex items-center justify-center rounded-full bg-gradient-brand text-white shadow-lift transition-shadow hover:shadow-[0_20px_40px_-10px_rgba(15,82,186,0.5)] z-20 group"
+              style={{ height: fabSize, width: fabSize }}
             >
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-400"></span>
-              </span>
-              <span className="text-[13px] font-semibold text-slate-700 tracking-wide font-heading">Plan Your Trip</span>
-              <div className="absolute -bottom-2 right-6 h-4 w-4 rotate-45 bg-white border-b border-r border-slate-100" />
-            </motion.div>
-          )}
-        </AnimatePresence>
+              {!open && (
+                <span className="absolute inset-0 rounded-full animate-ping bg-primary/30 z-[-1]" style={{ animationDuration: '3s' }} />
+              )}
+              <div className="absolute inset-0 rounded-full bg-white/20 blur-sm opacity-0 hover:opacity-100 transition-opacity" />
 
-        <motion.button
-          onClick={() => setOpen((v) => !v)}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          aria-label="Toggle chat"
-          className="relative flex items-center justify-center rounded-full bg-gradient-brand text-white shadow-lift transition-shadow hover:shadow-[0_20px_40px_-10px_rgba(15,82,186,0.5)] z-20 group"
-          style={{ height: fabSize, width: fabSize }}
-        >
-          {/* Subtle pulse ring behind button */}
-          {!open && (
-            <span className="absolute inset-0 rounded-full animate-ping bg-primary/30 z-[-1]" style={{ animationDuration: '3s' }} />
-          )}
-          <div className="absolute inset-0 rounded-full bg-white/20 blur-sm opacity-0 hover:opacity-100 transition-opacity" />
-
-          <AnimatePresence>
-            {!open && unread > 0 && (
-              <motion.span
-                initial={{ scale: 0 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0 }}
-                className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-rose-500 text-[11px] font-bold text-white ring-2 ring-white shadow-sm"
-              >
-                {unread}
-              </motion.span>
-            )}
-          </AnimatePresence>
-          <AnimatePresence mode="wait">
-            {open ? (
-              <motion.span
-                key="close"
-                initial={{ rotate: -90, opacity: 0 }}
-                animate={{ rotate: 0, opacity: 1 }}
-                exit={{ rotate: 90, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                <ChevronDown size={28} />
-              </motion.span>
-            ) : (
-              <motion.span
-                key="bot"
-                initial={{ scale: 0.5, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.5, opacity: 0 }}
-                transition={{ duration: 0.2 }}
-              >
-                <Sparkles size={26} />
-              </motion.span>
-            )}
-          </AnimatePresence>
-        </motion.button>
-      </div>
+              <AnimatePresence>
+                {!open && unread > 0 && (
+                  <motion.span
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{ scale: 0 }}
+                    className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-rose-500 text-[11px] font-bold text-white ring-2 ring-white shadow-sm"
+                  >
+                    {unread}
+                  </motion.span>
+                )}
+              </AnimatePresence>
+              <AnimatePresence mode="wait">
+                {open ? (
+                  <motion.span
+                    key="close"
+                    initial={{ rotate: -90, opacity: 0 }}
+                    animate={{ rotate: 0, opacity: 1 }}
+                    exit={{ rotate: 90, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <ChevronDown size={28} />
+                  </motion.span>
+                ) : (
+                  <motion.span
+                    key="bot"
+                    initial={{ scale: 0.5, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    exit={{ scale: 0.5, opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <Sparkles size={26} />
+                  </motion.span>
+                )}
+              </AnimatePresence>
+            </motion.button>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       <style>{`
         @keyframes typingBounce {
